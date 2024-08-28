@@ -1,10 +1,1 @@
-<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="48" height="48" rx="8.88889" fill="white"/>
-<path d="M11.26 30H7.9L13.76 16.6H18.04L23.94 30H20.5L19.24 27.04H12.54L11.26 30ZM14.96 21.42L13.7 24.34H18.08L16.82 21.42L16 19.34H15.78L14.96 21.42ZM27.6398 30H24.6398V16.6H27.6398V21.92H34.6398V16.6H37.6398V30H34.6398V24.62H27.6398V30Z" fill="url(#paint0_linear_1545_39)"/>
-<defs>
-<linearGradient id="paint0_linear_1545_39" x1="8" y1="35.5" x2="38.0109" y2="10.5484" gradientUnits="userSpaceOnUse">
-<stop stop-color="#989FFF"/>
-<stop offset="1" stop-color="#29A2FF"/>
-</linearGradient>
-</defs>
-</svg>
+<svg id="eJIucfd7PqC1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" project-id="b9608443ca444e0a9e35596493220be1" export-id="f460c2301935402494b7d40342fb4ffe" cached="false"><defs><linearGradient id="eJIucfd7PqC3-fill" x1="8" y1="35.5" x2="38.0109" y2="10.5484" spreadMethod="pad" gradientUnits="userSpaceOnUse" gradientTransform="translate(0 0)"><stop id="eJIucfd7PqC3-fill-0" offset="0%" stop-color="#989fff"/><stop id="eJIucfd7PqC3-fill-1" offset="100%" stop-color="#29a2ff"/></linearGradient></defs><rect width="48" height="48" rx="8.88889" ry="8.88889" fill="#fff"/><path d="M11.26,30h-3.36l5.86-13.4h4.28L23.94,30h-3.44l-1.26-2.96h-6.7L11.26,30Zm3.7-8.58L13.7,24.34h4.38l-1.26-2.92L16,19.34h-.22l-.82,2.08ZM27.6398,30h-3v-13.4h3v5.32h7v-5.32h3v13.4h-3v-5.38h-7v5.38Z" transform="matrix(-.993833 0 0 1.042998 46.629478-.301853)" fill="url(#eJIucfd7PqC3-fill)"/></svg>
