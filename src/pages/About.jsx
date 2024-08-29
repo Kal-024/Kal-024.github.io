@@ -12,10 +12,10 @@ const About = () => {
   return (
     <section className='max-container'>
       <h1 className='head-text'>
-        Hello, I'm{" "}
+        Hola, Soy{" "}
         <span className='blue-gradient_text font-semibold drop-shadow'>
           {" "}
-          Adrian
+          Harvey
         </span>{" "}
         👋
       </h1>
