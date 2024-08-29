@@ -4,8 +4,8 @@ import Projects from "./Projects";
 import Contact from "./Contact";
 
 export {
-    Inicio,
-    Acerca de,
-    Proyectos,
-    Contacto
+    Home,
+    About,
+    Projects,
+    Contact
 }
