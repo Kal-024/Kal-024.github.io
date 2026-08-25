@@ -32,7 +32,7 @@ import {
 export const profile = {
     name: "Harvey Vilchez",
     fullName: "Harvey Caleb Vilchez Tapia",
-    email: "vilchezharvey747@outlook.com",
+    email: "mail.portfolio.sender@gmail.com",
     github: "https://github.com/Kal-024"
 };
 
