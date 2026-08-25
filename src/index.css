@@ -10,7 +10,10 @@
 }
 
 body {
-  font-family: "Work Sans", sans-serif;
+  /* Los fallbacks japoneses evitan que el navegador caiga en una tipografía
+     con glifos desparejos al cambiar el idioma a ja. */
+  font-family: "Work Sans", "Hiragino Sans", "Noto Sans JP", "Yu Gothic",
+    "Meiryo", sans-serif;
 }
 
 body:has(.card[data-color="blue"]:hover) {

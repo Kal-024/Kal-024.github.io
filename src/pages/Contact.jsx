@@ -5,8 +5,11 @@ import { Suspense, useRef, useState } from "react";
 import { Fox } from "../models";
 import useAlert from "../hooks/useAlert";
 import { Alert, Loader } from "../components";
+import { profile } from "../constants";
+import useLanguage from "../hooks/useLanguage";
 
 const Contact = () => {
+  const { t } = useLanguage();
   const formRef = useRef();
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const { alert, showAlert, hideAlert } = useAlert();
@@ -31,9 +34,10 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "JavaScript Mastery",
+          to_name: profile.name,
           from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
+          to_email: profile.email,
+          reply_to: form.email,
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
@@ -43,7 +47,7 @@ const Contact = () => {
           setLoading(false);
           showAlert({
             show: true,
-            text: "Thank you for your message 😃",
+            text: t.contact.success,
             type: "success",
           });
 
@@ -55,7 +59,7 @@ const Contact = () => {
               email: "",
               message: "",
             });
-          }, [3000]);
+          }, 3000);
         },
         (error) => {
           setLoading(false);
@@ -64,7 +68,7 @@ const Contact = () => {
 
           showAlert({
             show: true,
-            text: "I didn't receive your message 😢",
+            text: t.contact.error,
             type: "danger",
           });
         }
@@ -76,20 +80,31 @@ const Contact = () => {
       {alert.show && <Alert {...alert} />}
 
       <div className='flex-1 min-w-[50%] flex flex-col'>
-        <h1 className='head-text'>Get in Touch</h1>
+        <h1 className='head-text'>{t.contact.title}</h1>
+
+        <p className='mt-4 text-slate-500'>
+          {t.contact.introBefore}
+          <a
+            href={`mailto:${profile.email}`}
+            className='font-semibold text-blue-600'
+          >
+            {profile.email}
+          </a>
+          {t.contact.introAfter}
+        </p>
 
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className='w-full flex flex-col gap-7 mt-14'
+          className='w-full flex flex-col gap-7 mt-10'
         >
           <label className='text-black-500 font-semibold'>
-            Name
+            {t.contact.nameLabel}
             <input
               type='text'
               name='name'
               className='input'
-              placeholder='John'
+              placeholder={t.contact.namePlaceholder}
               required
               value={form.name}
               onChange={handleChange}
@@ -98,12 +113,12 @@ const Contact = () => {
             />
           </label>
           <label className='text-black-500 font-semibold'>
-            Email
+            {t.contact.emailLabel}
             <input
               type='email'
               name='email'
               className='input'
-              placeholder='John@gmail.com'
+              placeholder={t.contact.emailPlaceholder}
               required
               value={form.email}
               onChange={handleChange}
@@ -112,12 +127,13 @@ const Contact = () => {
             />
           </label>
           <label className='text-black-500 font-semibold'>
-            Your Message
+            {t.contact.messageLabel}
             <textarea
               name='message'
               rows='4'
               className='textarea'
-              placeholder='Write your thoughts here...'
+              placeholder={t.contact.messagePlaceholder}
+              required
               value={form.message}
               onChange={handleChange}
               onFocus={handleFocus}
@@ -132,7 +148,7 @@ const Contact = () => {
             onFocus={handleFocus}
             onBlur={handleBlur}
           >
-            {loading ? "Sending..." : "Submit"}
+            {loading ? t.contact.submitting : t.contact.submit}
           </button>
         </form>
       </div>

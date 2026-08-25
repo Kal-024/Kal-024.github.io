@@ -1,228 +1,152 @@
-import { meta, shopify, starbucks, tesla } from "../assets/images";
+import { epn, uni, wimix } from "../assets/images";
 import {
-    car,
+    api,
+    bank,
     contact,
+    csharp,
     css,
-    estate,
-    express,
+    dashboard,
+    dotnet,
+    erp,
     git,
     github,
     html,
     javascript,
+    laravel,
     linkedin,
-    mongodb,
-    motion,
-    mui,
-    nextjs,
-    nodejs,
-    pricewise,
+    office,
+    php,
+    portfolio,
+    postgresql,
+    powerbi,
+    python,
     react,
-    redux,
-    sass,
-    snapgram,
-    summiz,
+    rrhh,
+    sqlserver,
     tailwindcss,
-    threads,
-    typescript
+    uipath
 } from "../assets/icons";
 
+// Este archivo guarda solo lo que no depende del idioma: iconos, colores,
+// enlaces y stack. Los textos viven en src/constants/locales y se enlazan
+// con estos registros por su `id`.
+export const profile = {
+    name: "Harvey Vilchez",
+    fullName: "Harvey Caleb Vilchez Tapia",
+    email: "vilchezharvey747@outlook.com",
+    github: "https://github.com/Kal-024",
+    linkedin: "https://www.linkedin.com/in/harveyvilchez"
+};
+
 export const skills = [
+    { imageUrl: csharp, name: "C#", typeKey: "backend" },
+    { imageUrl: dotnet, name: ".NET", typeKey: "backend" },
+    { imageUrl: php, name: "PHP", typeKey: "backend" },
+    { imageUrl: laravel, name: "Laravel", typeKey: "backend" },
+    { imageUrl: python, name: "Python", typeKey: "backend" },
+    { imageUrl: api, name: "REST APIs", typeKey: "backend" },
+    { imageUrl: sqlserver, name: "SQL Server", typeKey: "database" },
+    { imageUrl: postgresql, name: "PostgreSQL", typeKey: "database" },
+    { imageUrl: javascript, name: "JavaScript", typeKey: "frontend" },
+    { imageUrl: html, name: "HTML", typeKey: "frontend" },
+    { imageUrl: css, name: "CSS", typeKey: "frontend" },
+    { imageUrl: react, name: "React", typeKey: "frontend" },
+    { imageUrl: tailwindcss, name: "Tailwind CSS", typeKey: "frontend" },
+    { imageUrl: powerbi, name: "Power BI", typeKey: "data" },
+    { imageUrl: uipath, name: "UiPath (RPA)", typeKey: "automation" },
+    { imageUrl: office, name: "Microsoft 365", typeKey: "productivity" },
+    { imageUrl: git, name: "Git", typeKey: "versionControl" },
+    { imageUrl: github, name: "GitHub", typeKey: "versionControl" }
+];
+
+// Orden cronológico: el puesto más antiguo primero, como lo dibuja la línea
+// de tiempo de la página About.
+export const experiences = [
     {
-        imageUrl: css,
-        name: "CSS",
-        type: "Frontend",
+        id: "wimix",
+        company_name: "WIMIX Solutions & Services",
+        icon: wimix,
+        iconBg: "#bfe3de"
     },
     {
-        imageUrl: express,
-        name: "Express",
-        type: "Backend",
-    },
-    {
-        imageUrl: git,
-        name: "Git",
-        type: "Version Control",
-    },
-    {
-        imageUrl: github,
-        name: "GitHub",
-        type: "Version Control",
-    },
-    {
-        imageUrl: html,
-        name: "HTML",
-        type: "Frontend",
-    },
-    {
-        imageUrl: javascript,
-        name: "JavaScript",
-        type: "Frontend",
-    },
-    {
-        imageUrl: mongodb,
-        name: "MongoDB",
-        type: "Database",
-    },
-    {
-        imageUrl: motion,
-        name: "Motion",
-        type: "Animation",
-    },
-    {
-        imageUrl: mui,
-        name: "Material-UI",
-        type: "Frontend",
-    },
-    {
-        imageUrl: nextjs,
-        name: "Next.js",
-        type: "Frontend",
-    },
-    {
-        imageUrl: nodejs,
-        name: "Node.js",
-        type: "Backend",
-    },
-    {
-        imageUrl: react,
-        name: "React",
-        type: "Frontend",
-    },
-    {
-        imageUrl: redux,
-        name: "Redux",
-        type: "State Management",
-    },
-    {
-        imageUrl: sass,
-        name: "Sass",
-        type: "Frontend",
-    },
-    {
-        imageUrl: tailwindcss,
-        name: "Tailwind CSS",
-        type: "Frontend",
-    },
-    {
-        imageUrl: typescript,
-        name: "TypeScript",
-        type: "Frontend",
+        id: "epn",
+        company_name: "Empresa Portuaria Nacional",
+        icon: epn,
+        iconBg: "#c7d7f5"
     }
 ];
 
-export const experiences = [
+export const education = [
     {
-        title: "React.js Developer",
-        company_name: "Starbucks",
-        icon: starbucks,
-        iconBg: "#accbe1",
-        date: "March 2020 - April 2021",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
+        id: "uni",
+        icon: uni
+    }
+];
+
+export const certifications = [
     {
-        title: "React Native Developer",
-        company_name: "Tesla",
-        icon: tesla,
-        iconBg: "#fbc3bc",
-        date: "Jan 2021 - Feb 2022",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
-    {
-        title: "Web Developer",
-        company_name: "Shopify",
-        icon: shopify,
-        iconBg: "#b7e4c7",
-        date: "Jan 2022 - Jan 2023",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
-    {
-        title: "Full stack Developer",
-        company_name: "Meta",
-        icon: meta,
-        iconBg: "#a2d2ff",
-        date: "Jan 2023 - Present",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
+        id: "uipath",
+        iconUrl: uipath
+    }
 ];
 
 export const socialLinks = [
     {
-        name: 'Contact',
+        id: "contact",
+        name: "Contact",
         iconUrl: contact,
-        link: '/contact',
+        link: "/contact"
     },
     {
-        name: 'GitHub',
+        id: "github",
+        name: "GitHub",
         iconUrl: github,
-        link: 'https://github.com/YourGitHubUsername',
+        link: profile.github
     },
     {
-        name: 'LinkedIn',
+        id: "linkedin",
+        name: "LinkedIn",
         iconUrl: linkedin,
-        link: 'https://www.linkedin.com/in/YourLinkedInUsername',
+        link: profile.linkedin
     }
 ];
 
+// Casos de trabajo profesional: el código es propiedad de cada empresa, por eso
+// no hay repositorio público. `link` en null oculta el enlace en la tarjeta.
 export const projects = [
     {
-        iconUrl: pricewise,
-        theme: 'btn-back-red',
-        name: 'Amazon Price Tracker',
-        description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
-        link: 'https://github.com/adrianhajdin/pricewise',
+        id: "talent",
+        iconUrl: rrhh,
+        theme: "btn-back-blue",
+        stack: [".NET", "C#", "SQL Server"],
+        link: null
     },
     {
-        iconUrl: threads,
-        theme: 'btn-back-green',
-        name: 'Full Stack Threads Clone',
-        description: 'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-        link: 'https://github.com/adrianhajdin/threads',
+        id: "financial",
+        iconUrl: bank,
+        theme: "btn-back-yellow",
+        stack: [".NET", "SQL Server", "T-SQL"],
+        link: null
     },
     {
-        iconUrl: car,
-        theme: 'btn-back-blue',
-        name: 'Car Finding App',
-        description: 'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
-        link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
+        id: "refactor",
+        iconUrl: erp,
+        theme: "btn-back-green",
+        stack: [".NET", "SQL Server", "PostgreSQL"],
+        link: null
     },
     {
-        iconUrl: snapgram,
-        theme: 'btn-back-pink',
-        name: 'Full Stack Instagram Clone',
-        description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-        link: 'https://github.com/adrianhajdin/social_media_app',
+        id: "powerbi",
+        iconUrl: dashboard,
+        theme: "btn-back-pink",
+        stack: ["Power BI", "SQL"],
+        link: null
     },
     {
-        iconUrl: estate,
-        theme: 'btn-back-black',
-        name: 'Real-Estate Application',
-        description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-        link: 'https://github.com/adrianhajdin/projects_realestate',
-    },
-    {
-        iconUrl: summiz,
-        theme: 'btn-back-yellow',
-        name: 'AI Summarizer Application',
-        description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-        link: 'https://github.com/adrianhajdin/project_ai_summarizer',
+        id: "portfolio",
+        iconUrl: portfolio,
+        theme: "btn-back-black",
+        stack: ["React", "Three.js", "Tailwind CSS"],
+        link: "https://github.com/Kal-024/Kal-024.github.io"
     }
 ];

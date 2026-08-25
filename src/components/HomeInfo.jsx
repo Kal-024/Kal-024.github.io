@@ -1,65 +1,39 @@
 import { Link } from "react-router-dom";
 
 import { arrow } from "../assets/icons";
+import { profile } from "../constants";
+import useLanguage from "../hooks/useLanguage";
 
 const HomeInfo = ({ currentStage }) => {
+  const { t } = useLanguage();
+
   if (currentStage === 1)
     return (
       <h1 className='sm:text-xl sm:leading-snug text-center neo-brutalism-blue py-4 px-8 text-white mx-5'>
-        Hola, Soy
-        <span className='font-semibold mx-2 text-white'>Harvey</span>
-        👋
+        {t.home.greetingBefore}
+        <span className='font-semibold mx-2 text-white'>{profile.name}</span>
+        {t.home.greetingAfter}
+        {" 👋"}
         <br />
-        Ingeniero de Software de Nicaragua 🇳🇮
+        {t.home.tagline}
       </h1>
     );
 
-  if (currentStage === 2) {
-    return (
-      <div className='info-box'>
-        <p className='font-medium sm:text-xl text-center'>
-          Worked with many companies <br /> and picked up many skills along the way
-        </p>
+  const stage = t.home[`stage${currentStage}`];
+  const routes = { 2: "/about", 3: "/projects", 4: "/contact" };
 
-        <Link to='/about' className='neo-brutalism-white neo-btn'>
-          Learn more
-          <img src={arrow} alt='arrow' className='w-4 h-4 object-contain' />
-        </Link>
-      </div>
-    );
-  }
+  if (!stage) return null;
 
-  if (currentStage === 3) {
-    return (
-      <div className='info-box'>
-        <p className='font-medium text-center sm:text-xl'>
-          Led multiple projects to success over the years. <br /> Curious about the impact?
-        </p>
+  return (
+    <div className='info-box'>
+      <p className='font-medium sm:text-xl text-center'>{stage.text}</p>
 
-        <Link to='/projects' className='neo-brutalism-white neo-btn'>
-          Visit my portfolio
-          <img src={arrow} alt='arrow' className='w-4 h-4 object-contain' />
-        </Link>
-      </div>
-    );
-  }
-
-  if (currentStage === 4) {
-    return (
-      <div className='info-box'>
-      <p className='font-medium sm:text-xl text-center'>
-        Need a project done or looking for a dev? <br/> I'm just a few keystrokes away
-      </p>
-
-      <Link to='/contact' className='neo-brutalism-white neo-btn'>
-        Let's talk
-        <img src={arrow} alt='arrow' className='w-4 h-4 object-contain' />
+      <Link to={routes[currentStage]} className='neo-brutalism-white neo-btn'>
+        {stage.cta}
+        <img src={arrow} alt='' className='w-4 h-4 object-contain' />
       </Link>
     </div>
-    );
-  }
-
-  return null;
+  );
 };
 
 export default HomeInfo;
