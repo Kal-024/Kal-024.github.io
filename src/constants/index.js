@@ -13,7 +13,6 @@ import {
     html,
     javascript,
     laravel,
-    linkedin,
     office,
     php,
     portfolio,
@@ -34,8 +33,7 @@ export const profile = {
     name: "Harvey Vilchez",
     fullName: "Harvey Caleb Vilchez Tapia",
     email: "vilchezharvey747@outlook.com",
-    github: "https://github.com/Kal-024",
-    linkedin: "https://www.linkedin.com/in/harveyvilchez"
+    github: "https://github.com/Kal-024"
 };
 
 export const skills = [
@@ -102,12 +100,6 @@ export const socialLinks = [
         name: "GitHub",
         iconUrl: github,
         link: profile.github
-    },
-    {
-        id: "linkedin",
-        name: "LinkedIn",
-        iconUrl: linkedin,
-        link: profile.linkedin
     }
 ];
 

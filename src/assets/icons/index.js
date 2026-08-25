@@ -5,7 +5,6 @@ import html from './html.svg'
 import javascript from './javascript.svg'
 import react from './react.svg'
 import tailwindcss from './tailwindcss.svg'
-import linkedin from './linkedin.svg'
 import arrow from './arrow.svg'
 import contact from './contact.svg'
 import soundon from './soundon.png'
@@ -37,7 +36,6 @@ export {
     javascript,
     react,
     tailwindcss,
-    linkedin,
     arrow,
     contact,
     soundon,
